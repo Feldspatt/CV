@@ -24,20 +24,196 @@ video#bgvid {
 }
 
 .navButton {
-  width: 100px;
+  height: 6vh;
+  width: 16vh;
+  font-size: 100%;
   align-self: center;
-  transition: transform 0.7s linear;
+  display: inline-block;
+  transition: 0.2s linear;
   position: absolute;
-  animation: move 10s linear infinite;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  border-radius: 0px 0px 0px;
+  overflow: hidden;
 }
 
-@keyframes move {
+.navButton:hover {
+  background-color: #5aecff;
+  color: black;
+  box-shadow: 0 0 20px #5aecff, 0 0 20px #5aecff, 0 0 20px #5aecff, 0 0 20px #5aecff;
+}
+
+a {
+  align-self: center;
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+a span {
+  position: absolute;
+  display: block;
+}
+
+.navButton span {
+  position: absolute;
+  display: block;
+}
+
+a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+a:hover {
+  color: #971111;
+  transition: 1s;
+}
+
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(2) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+a:hover span:nth-child(2) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(3) {
+  right: 0;
+  top: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+a:hover span:nth-child(3) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.navButton span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+.navButton:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.navButton span:nth-child(2) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5ff5fa);
+}
+
+.navButton:hover span:nth-child(2) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.navButton span:nth-child(3) {
+  right: 0;
+  top: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+.navButton:hover span:nth-child(3) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+button span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #971111);
+}
+
+button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+@keyframes moveBtnSkills {
   from {
-    transform: rotate(0deg) translateX(400px) rotate(0deg);
+    transform: rotate(0deg) translateX(40vh) rotate(0deg);
   }
   to {
-    transform: rotate(360deg) translateX(400px) rotate(-360deg);
+    transform: rotate(360deg) translateX(40vh) rotate(-360deg);
   }
+}
+@keyframes moveBtnContacts {
+  from {
+    transform: rotate(120deg) translateX(40vh) rotate(240deg);
+  }
+  to {
+    transform: rotate(480deg) translateX(40vh) rotate(-120deg);
+  }
+}
+@keyframes moveBtnProjects {
+  from {
+    transform: rotate(240deg) translateX(40vh) rotate(120deg);
+  }
+  to {
+    transform: rotate(600deg) translateX(40vh) rotate(-240deg);
+  }
+}
+#btnSkills {
+  animation: moveBtnSkills 70s linear infinite;
+}
+
+#btnContacts {
+  animation: moveBtnContacts 60s linear infinite;
+}
+
+#btnProjects {
+  animation: moveBtnProjects 50s linear infinite;
 }
 
 /*# sourceMappingURL=style.css.map */
