@@ -1,0 +1,33 @@
+$generalTextColor: rgb(255, 255, 255);
+
+body {
+    color: $generalTextColor;
+    height: 100%;
+    display: flex; /* contexte sur le parent */
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+    transition: transform 0.7s linear;
+}
+
+video#bgvid {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-color: black;
+    background-size: cover;
+}
+
+
+.navButton {
+    width: 100px;
+    align-self:center;
+	transition: transform 0.7s linear;
+    position: absolute;
+    animation: move 10s linear infinite;
+}
+
+  
+  @keyframes move {
+    from { transform: rotate(0deg) translateX(400px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(400px) rotate(-360deg); }
+    }
